@@ -1,0 +1,117 @@
+html, body {
+  margin: 0px;
+  height: 100%; 
+}
+
+#sidebar {
+	grid-area: sidebar;
+	background-color: rgb(12, 119, 241);
+	padding: 5px; /* Adds padding for spacing */
+}
+
+#content {
+	grid-area: content;	
+}
+
+.footer{
+  grid-area: footer;  
+}
+
+.sideBarItem{
+	max-height: 50px;
+	max-width: 50px;
+	padding:5px;
+}
+
+.sideBarItem img{
+	max-height: 50px;
+	max-Width:50px;
+	border-radius: 20%; /* Adds border-radius to create rounded borders for the images */
+	cursor: pointer; /* changes to a pointer on hover */	
+}
+
+.colourPalette{
+	grid-area: colourP;
+	display:flex;
+	flex-direction:grid;
+	flex-flow: wrap;
+	
+}
+
+.options{
+	grid-area: options;
+	padding: 15px;
+	
+}
+
+.colourSwatches{
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+	border-radius: 50%; /* Adds rounded borders to make the colors look like a circle */
+	cursor: pointer;/* Cursor on hover changes to a pointer */
+	border: 2px solid #fff;
+	
+}
+
+
+.wrapper {
+display: grid;
+height: 100%;
+grid-template-columns: 70px 230px  minmax(500px, 1fr);
+grid-template-rows: 35px minmax(500px, 1fr) 160px;
+grid-template-areas:
+               "header header header"
+				"sidebar content content"
+                "colourP colourP options";
+background-color: #fff;
+color: #444;
+}
+.box {
+  background-color: #ff5733; 
+  color: #fff;
+  font-size: 150%;
+}
+
+.header {
+	grid-area: header;
+	font-family: 'Baloo', cursive; /* Uses the "Baloo" font */
+  	background-color: purple;
+}
+#clearButton, #saveImageButton, #selectModeButton, #directionButton{
+	background-color: #3498db; 
+	color: #fff; 
+	padding: 5px 20px; /* Padding for the button size */
+	border: none; 
+	border-radius: 10px; /* Rounds the corners of the buttons */
+	cursor: pointer; /* Cursor changes to a pointer on hover */
+	margin-left: 10px; /* Adds spacing between the buttons */
+	font-family: 'Baloo', cursive; /* Uses the "Baloo" font */
+	
+  }
+  
+  #clearButton:hover, #saveImageButton:hover, #selectModeButton:hover, #directionButton:hover {
+	background-color: #ece905; /* Background color on hover for all the buttons */
+  }
+
+/* wanted to add a color wheel instead but was unsuccessful.
+	This was the css to style it */
+  /* .color-picker {
+	width: 200px;
+	height: 200px;
+	background: conic-gradient(
+		from 0deg,
+		red,
+		yellow,
+		green,
+		cyan,
+		blue,
+		magenta,
+		red
+	);
+	border-radius: 50%;
+	cursor: pointer;
+} */
